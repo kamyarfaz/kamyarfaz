@@ -48,7 +48,7 @@ export function Hero() {
         {/* Right Column: Image & Stats */}
         <div className="flex-1 relative flex justify-end items-end lg:items-center min-h-[500px]">
           {/* Stats Overlay */}
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -62,7 +62,7 @@ export function Hero() {
               <p className="text-4xl md:text-5xl font-medium text-[#202020]">+3</p>
               <p className="text-sm text-[#404040] mt-1">Startup raised</p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Hero Image */}
           <div className="relative w-full max-w-[650px] aspect-[650/636]">
