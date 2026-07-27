@@ -8,6 +8,7 @@ const PROJECTS = [
   {
     id: "miznex",
     number: "01",
+    link: "https://miznex.com/en",
     title: "Miznex",
     subtitle:
       "A comprehensive restaurant management platform with digital menus, POS, KDS, and inventory automation.",
@@ -31,6 +32,7 @@ const PROJECTS = [
   {
     id: "meta-lawyer",
     number: "02",
+    link: "https://meta-lawyer.vercel.app/",
     title: "Meta Lawyer",
     subtitle:
       "An AI-powered legal assistant platform that helps users get fast, reasoned legal insights and document support.",
@@ -44,11 +46,12 @@ const PROJECTS = [
         className: "w-full md:w-[650px] rounded-xl shadow-2xl",
       },
     ],
-    layout: "left",
+    layout: "right",
   },
   {
     id: "pisa",
     number: "03",
+    link: "https://pizarealestateapp.netlify.app/",
     title: "Pisa",
     subtitle:
       "An all-in-one real-estate platform for listing, managing, and exploring properties.",
@@ -62,11 +65,12 @@ const PROJECTS = [
         className: "w-full md:w-[650px] rounded-xl shadow-2xl",
       },
     ],
-    layout: "right",
+    layout: "left",
   },
   {
     id: "trading-ai",
     number: "04",
+    link: "https://tradingaiapp.netlify.app/",
     title: "TradingAI",
     subtitle:
       "AI-powered trading assistant delivering smart entries, stops, targets, and confidence insights in real time.",
@@ -85,6 +89,24 @@ const PROJECTS = [
           "absolute bottom-0 -left-12 w-[120px] md:w-[150px] z-20 rounded-[2rem] shadow-2xl border-4 border-gray-900",
       },
     ],
+    layout: "right",
+  },
+  {
+    id: "doitify",
+    number: "05",
+    link: "https://doitify.com/",
+    title: "Doitify",
+    subtitle: "AI-powered project management and team collaboration platform",
+    description:
+      "Doitify is a smart platform for goal management, project management, team collaboration and personal growth that uses AI to help you with planning, teamwork and continuous tracking until you achieve results.",
+    description2:
+      "Manage projects, assign tasks, track progress, monitor team performance, collaborate in real time, and keep every workflow organized in one intelligent workspace.",
+    images: [
+      {
+        src: "/doitifyDesktop.png",
+        className: "w-[90%] md:w-[600px] z-10 rounded-xl shadow-2xl",
+      },
+    ],
     layout: "left",
   },
 ];
@@ -98,12 +120,14 @@ export function Projects() {
       <div className="max-w-[1440px] mx-auto px-4 md:px-12 flex flex-col gap-32">
         {PROJECTS.map((project, index) => (
           <motion.div
-            key={project.id}
+            key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col ${project.layout === "right" ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 lg:gap-24`}
+            className={`flex flex-col ${
+              project.layout === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
+            } items-center gap-12 lg:gap-24`}
           >
             {/* Text Content */}
             <div className="flex-1 relative">
@@ -124,19 +148,18 @@ export function Projects() {
                 </div>
 
                 <div className="flex gap-4 mt-8">
-                  <button className="flex items-center gap-2 bg-black/90 hover:bg-black text-white px-6 py-3 rounded-full transition-all group">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-black/90 hover:bg-black text-white px-6 py-3 rounded-full transition-all group"
+                  >
                     <span className="font-medium">Live Demo</span>
                     <PlayCircle
                       size={18}
                       className="fill-white text-black group-hover:scale-110 transition-transform"
                     />
-                  </button>
-                  <button className="flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full hover:border-black transition-colors group">
-                    <Github
-                      size={20}
-                      className="text-gray-600 group-hover:text-black transition-colors"
-                    />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

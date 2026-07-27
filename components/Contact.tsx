@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Mail, Phone, Copy, Check, Github, Linkedin, Twitter } from 'lucide-react';
 import { useState } from 'react';
 
@@ -24,7 +23,7 @@ export function Contact() {
       </div>
       
       <h2 className="text-2xl md:text-3xl font-normal text-[#202020] max-w-xl mb-16 leading-relaxed">
-        What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.
+        {"What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect."}
       </h2>
 
       <div className="flex flex-col gap-8 items-center w-full max-w-2xl">
@@ -62,15 +61,15 @@ export function Contact() {
       <div className="mt-16 flex flex-col items-center gap-4">
         <p className="text-gray-500 text-sm font-medium">You may also find me on these platforms!</p>
         <div className="flex gap-6">
-             <a href="#" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-black">
+             <a href="https://github.com/kamyarfaz" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-black">
                 <Github className="w-5 h-5" />
              </a>
-             <a href="#" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-blue-600">
+             <a href="http://www.linkedin.com/in/kamyarfaz" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-blue-600">
                 <Linkedin className="w-5 h-5" />
              </a>
-             <a href="#" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-black">
+             {/* <a href="#" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-600 hover:text-black">
                 <Twitter className="w-5 h-5" />
-             </a>
+             </a> */}
         </div>
       </div>
     </section>
